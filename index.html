@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta price="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework 12</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Open+Sans:wght@600;800&family=Roboto:ital,wght@0,500;1,100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="content">
+        <h2 class="heading-item">Cart Items</h2>
+    </div>
+    <template class="template">
+        <div class="card">
+        <img src="./img/close.png" alt="" class="close">
+            <div class="card_image">
+                <img src="img/1_img.jpg" alt="photo" class="image">
+            </div>
+            <div class="card_text">
+                <h1 class="card_name">MANGO  PEOPLE  T-SHIRT</h1>
+                <p class="card_price">Price: <span class="color_red"></span></p>
+                <p class="card_color">Color: <span class="color_gray"></span></p>
+                <p class="card_size">Size: <span class="color_gr"></span></p>
+                <p class="card_quantity">Quantity:	<input type="" class="input"></p>
+            </div>
+        </div>
+    </template>
+
+    <script src="data.js"></script>
+    <script>
+        const dataProducts = JSON.parse(dataInfo);
+        console.log(dataProducts);
+
+        const contentEl = document.querySelector('.content');
+        const templateEl = document.querySelector('.template');
+
+        dataProducts.forEach(element => {
+        const cardEl = templateEl.content.querySelector('.card').cloneNode(true);
+
+        const cardImage = cardEl.querySelector('.image');
+        cardImage.src = element.img;
+
+        const nameEl = cardEl.querySelector('.card_name');
+        nameEl.textContent = element.name;
+
+        const priceColorEl = cardEl.querySelector('.color_red');
+        priceColorEl.textContent = "$" + element.price;
+
+        const colorEl = cardEl.querySelector('.color_gray');
+    
+        colorEl.textContent = " " + element.color;
+
+    
+        const sizeEl = cardEl.querySelector('.color_gr');
+    
+        sizeEl.textContent = " " + element.size;
+
+        const quantityEl = cardEl.querySelector('.input');
+        quantityEl.value = "" + element.quantity;	
+
+        contentEl.appendChild(cardEl)
+
+        const closeEl = cardEl.querySelector('.close');
+        closeEl.addEventListener('click', function (e) {
+        cardEl.classList.add('close_card');
+        });
+    });
+
+    </script>
+</body>
+</html>
+                

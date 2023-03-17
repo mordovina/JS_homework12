@@ -1,0 +1,121 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.heading-item {
+    font-family: 'Lato', sans-serif;
+    font-style: Regular;
+    font-weight: 400px;
+    font-size: 30px;
+    line-height: 36px;
+    margin-top: 40px;
+    margin-bottom: 64px;
+    color: #222222;
+    text-align: center;
+}
+
+.content {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.card {
+    width: 652px;
+    display: flex;
+    justify-content: center;
+    box-shadow: 20px 20px 20px  #EAEAEA;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.close {
+    position: absolute;
+    top: 28px;
+    right: 22px;
+    cursor: pointer;
+}
+
+.close_card {
+    display: none;
+}
+
+.card-image {
+    width: 262px;
+    height: 306px;
+}
+
+.card_text {
+    width: 390px;
+    height: 306px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 31px;
+}
+
+.card_name {
+    font-family: 'Lato', sans-serif;
+    font-style: Regular;
+    font-weight: 400px;
+    font-size: 24px;
+    line-height: 29px;
+    color: #222222;
+    padding-bottom: 42px;
+}
+
+
+.card-price {
+    font-family: 'Lato', sans-serif;
+    font-style: normal;
+    font-weight: 400px;
+    font-size: 22px;
+    line-height: 26px;
+    color:  #575757;   /*  #EF5B70;*/
+}
+
+.color_red {
+    color: #EF5B70;
+}
+
+.color_gray {
+    color: #6F6E6E;
+}
+
+.color_gr {
+    color: #6F6E6E;
+}
+
+.card-color {
+    font-family: 'Lato', sans-serif;
+    font-style: Regular;
+    font-weight: 400px;
+    font-size: 22px;
+    line-height: 26px;
+    color:  #575757;    /*    #6F6E6E*/
+}
+
+.card-size {
+    font-family: 'Lato', sans-serif;
+    font-style: Regular;
+    font-weight: 400px;
+    font-size: 22px;
+    line-height: 26px;
+    color:  #575757;
+}
+
+.card-quantity {
+    font-family: 'Lato', sans-serif;
+    font-style: Regular;
+    font-weight: 400px;
+    font-size: 22px;
+    line-height: 26px;
+    color:  #575757;
+}
+
+.input {
+    width: 43px;
+    height: 24px;
+    text-align: center;
+    margin-left: 24px;
+}
